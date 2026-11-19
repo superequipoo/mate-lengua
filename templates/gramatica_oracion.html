@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oración Simple y Compuesta - Secundaria y Preparatoria</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+
+<header class="portada">
+    <h1>Oración <span>Simple y Compuesta</span></h1>
+    <p>Una idea vs varias ideas unidas. Aquí es donde se define tu calificación.</p>
+    <span class="etiqueta-nivel">SECUNDARIA • PREPARATORIA • EXANI-II</span>
+</header>
+
+<main class="contenido">
+
+    <!-- ========== VIDEO YOUTUBE ========== -->
+    <section class="bloque bloque-video">
+        <h2>▶ Video de Instrucción // Mira antes de leer</h2>
+        <p class="sub-video">Si cuentas los verbos, ya sabes si es simple o compuesta. Si buscas el nexo, ya sabes de qué tipo es.</p>
+
+        <div class="video-responsive">
+            <iframe src="https://www.youtube.com/embed/IcOVpeNlvBQ"
+                title="Oraciones coordinada, subordinada y yuxtapuesta"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+
+        <a href="https://www.youtube.com/watch?v=IcOVpeNlvBQ" target="_blank" class="link-youtube">Ver en YouTube →</a>
+    </section>
+
+    <!-- ========== SIMPLE ========== -->
+    <section class="bloque bloque-naranja">
+        <h2>🔹 Oración Simple - 1 solo verbo</h2>
+        <p class="sub-bloque">Una sola idea, un solo verbo conjugado.</p>
+
+        <h3>Cómo identificarla - Nivel Secundaria</h3>
+        <ul>
+            <li>Cuenta los verbos: si solo hay 1, es simple</li>
+            <li><b>Juan come pizza</b> → 1 verbo (come) = simple</li>
+            <li><b>María estudia mucho para el examen</b> → 1 verbo (estudia) = simple</li>
+            <li><b>Los niños juegan en el parque</b> → 1 verbo (juegan) = simple</li>
+        </ul>
+
+        <h3>Truco</h3>
+        <ul>
+            <li>Aunque sea larga, si solo tiene 1 verbo, sigue siendo simple</li>
+            <li>Ej: <b>El perro grande de mi abuela que vive en Puebla</b> duerme → Solo “duerme” es verbo conjugado = simple</li>
+            <li>¡OJO! Los infinitivos, gerundios y participios NO cuentan solos: “Quiero <b>comer</b>” sigue siendo simple, es una perífrasis.</li>
+        </ul>
+    </section>
+
+    <!-- ========== COMPUESTA ========== -->
+    <section class="bloque bloque-azul">
+        <h2>🔗 Oración Compuesta - 2 o más verbos</h2>
+        <p class="sub-bloque">Varias ideas unidas. Es donde te ponen los nexos.</p>
+
+        <h3>1. Coordinadas - Mismo nivel, mismo peso</h3>
+        <ul>
+            <li>Dos ideas iguales unidas por un nexo</li>
+            <li><b>Copulativas (suman): y, e, ni</b> → Juan estudia <b>y</b> trabaja / No estudia <b>ni</b> trabaja</li>
+            <li><b>Disyuntivas (eligen): o, u</b> → ¿Estudias <b>o</b> trabajas? / ¿Vienes <b>u</b> otro día?</li>
+            <li><b>Adversativas (contraste): pero, mas, sino, sin embargo</b> → Quiero ir, <b>pero</b> no puedo / No es bonito, <b>sino</b> feo</li>
+            <li><b>Explicativas:</b> es decir, o sea → Es bueno, <b>es decir</b>, te conviene</li>
+            <li><b>Distributivas:</b> unos... otros, ya... ya → <b>Unos</b> ríen, <b>otros</b> lloran</li>
+            <li>Truco: Puedes separarlas y siguen teniendo sentido: “Juan estudia. María trabaja.”</li>
+        </ul>
+
+        <h3>2. Subordinadas - Una depende de otra</h3>
+        <ul>
+            <li>Una oración no tiene sentido sola, necesita a la otra</li>
+            <li><b>Quiero que vengas</b> → “que vengas” no tiene sentido sola, depende de “quiero”</li>
+            <li>Nexos que debes memorizar: <b>que, porque, aunque, si, cuando, donde, como</b></li>
+            <li>Estudio <b>porque</b> quiero pasar / Iré <b>aunque</b> llueva / No sé <b>si</b> vendrá</li>
+            <li>Truco EXANI: Si quitas una parte y la otra queda incompleta, es subordinada</li>
+        </ul>
+
+        <h3>3. Yuxtapuestas - Sin nexo, solo signos</h3>
+        <ul>
+            <li>No usan nexo, usan coma, punto y coma o dos puntos</li>
+            <li>Llegué, vi, vencí.</li>
+            <li>Hace frío; me quedo en casa.</li>
+            <li>Truco: Si puedes poner “y” o “pero” entre ellas, es yuxtapuesta</li>
+        </ul>
+    </section>
+
+    <!-- ========== NIVEL PREPA ========== -->
+    <section class="bloque bloque-prepa">
+        <h2>🎓 Nivel Preparatoria: Los 3 tipos de subordinadas que te preguntan</h2>
+
+        <h3>1. Subordinada Sustantiva - Hace función de sustantivo</h3>
+        <ul>
+            <li>Se puede cambiar por “eso”: Quiero <b>que vengas</b> → Quiero <b>eso</b> ✅</li>
+            <li>Puede ser sujeto: <b>Que estudies</b> es importante. / Me gusta <b>que cantes</b>.</li>
+            <li>Nexos: <b>que, si, qué, quién, cuál</b></li>
+        </ul>
+
+        <h3>2. Subordinada Adjetiva / De relativo - Describe a un sustantivo</h3>
+        <ul>
+            <li>Se puede cambiar por un adjetivo: El libro <b>que me prestaste</b> es bueno → El libro <b>prestado</b> es bueno</li>
+            <li>Nexos: <b>que, quien, donde, cual, cuyo</b></li>
+            <li>Ej: La casa <b>donde nací</b> es bonita. / El chico <b>que llegó</b> es mi primo.</li>
+        </ul>
+
+        <h3>3. Subordinada Adverbial - Hace función de adverbio</h3>
+        <table class="tabla">
+            <tr><th>Tipo</th><th>Nexo</th><th>Ejemplo</th></tr>
+            <tr><td>Tiempo</td><td>cuando, mientras, antes de que</td><td>Te llamo <b>cuando llegue</b></td></tr>
+            <tr><td>Causa</td><td>porque, ya que, pues</td><td>Estudio <b>porque quiero pasar</b></td></tr>
+            <tr><td>Condición</td><td>si, siempre que</td><td><b>Si estudias</b>, pasas</td></tr>
+            <tr><td>Concesión</td><td>aunque, a pesar de que</td><td>Iré <b>aunque llueva</b></td></tr>
+            <tr><td>Finalidad</td><td>para que, a fin de que</td><td>Estudio <b>para que me vaya bien</b></td></tr>
+        </table>
+
+        <h3>4. La trampa de “aunque” y “pero”</h3>
+        <ul>
+            <li>Si “aunque” se puede cambiar por “pero”, es <b>coordinada adversativa</b>: Es caro, <b>aunque</b> lo compro = Es caro, <b>pero</b> lo compro.</li>
+            <li>Si NO se puede cambiar, es <b>subordinada concesiva</b>: Iré <b>aunque llueva</b> → No puedes decir “Iré pero llueva” ❌</li>
+        </ul>
+    </section>
+
+    <!-- ========== TABLA ========== -->
+    <section class="bloque bloque-verde">
+        <h2>📊 Tabla para que no te confundas</h2>
+        <div class="grid-tabla">
+            <div class="fila-tabla"><span><b class="c-verde">Simple</b></span><span>1 verbo</span><span>Juan come</span></div>
+            <div class="fila-tabla"><span><b class="c-azul">Coordinada</b></span><span>y, o, pero</span><span>Juan come y bebe</span></div>
+            <div class="fila-tabla"><span><b class="c-naranja">Subordinada</b></span><span>que, porque, si</span><span>Quiero que vengas</span></div>
+            <div class="fila-tabla"><span><b>Yuxtapuesta</b></span><span>, ; :</span><span>Llegué, vi, vencí</span></div>
+        </div>
+    </section>
+
+    <!-- ========== EJERCICIOS ========== -->
+    <section class="bloque">
+        <h2>✍️ Ejercicios - Nivel EXANI</h2>
+        <p class="sub-bloque">Escribe tu respuesta y comprueba. Se pondrá verde si está bien.</p>
+
+        <h3>Nivel Secundaria:</h3>
+        <div class="pregunta-box">
+            <p>1. “Juan estudia y María trabaja” ¿Simple o compuesta?</p>
+            <input class="ejercicio-input" data-respuesta="compuesta" placeholder="simple / compuesta">
+        </div>
+
+        <div class="pregunta-box">
+            <p>2. “Quiero ir pero no puedo” ¿Qué tipo de compuesta es?</p>
+            <input class="ejercicio-input" data-respuesta="coordinada" placeholder="coordinada / subordinada / yuxtapuesta">
+        </div>
+
+        <div class="pregunta-box">
+            <p>3. “Llegué, vi, vencí” ¿Qué tipo es?</p>
+            <input class="ejercicio-input" data-respuesta="yuxtapuesta" placeholder="">
+        </div>
+
+        <h3>Nivel Preparatoria:</h3>
+        <div class="pregunta-box">
+            <p>4. ¿Cuántos verbos tiene “María dijo que vendría mañana”?</p>
+            <input class="ejercicio-input" data-respuesta="2" placeholder="1 o 2">
+        </div>
+
+        <div class="pregunta-box">
+            <p>5. “Estudio porque quiero pasar el EXANI” ¿Coordinada o subordinada?</p>
+            <input class="ejercicio-input" data-respuesta="subordinada" placeholder="">
+        </div>
+
+        <div class="pregunta-box">
+            <p>6. “No fui a la fiesta, estaba enfermo” ¿Qué tipo es?</p>
+            <input class="ejercicio-input" data-respuesta="yuxtapuesta" placeholder="">
+        </div>
+
+        <div class="pregunta-box">
+            <p>7. “Quiero que vengas” → “Quiero eso” ¿Qué subordinada es?</p>
+            <input class="ejercicio-input" data-respuesta="sustantiva" placeholder="sustantiva / adjetiva / adverbial">
+        </div>
+
+        <div class="pregunta-box">
+            <p>8. “El libro que me prestaste es bueno” ¿Qué subordinada es?</p>
+            <input class="ejercicio-input" data-respuesta="adjetiva" placeholder="sustantiva / adjetiva / adverbial">
+        </div>
+
+        <button class="btn-comprobar" id="btn-comprobar">Comprobar respuestas</button>
+        <div id="resultado"></div>
+    </section>
+
+</main>
+
+<a href="{{ url_for('ejercicios_gramatica') }}" class="volver-orto">✦ Volver</a>
+
+<script src="{{ url_for('static', filename='js/oracion_simple_compuesta.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potencias y Raíces - Práctica paso a paso</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+
+<div class="portada">
+    <span class="etiqueta">MATEMÁTICAS // PRÁCTICA</span>
+    <h1>POTENCIAS <span>Y RAÍCES</span></h1>
+    <p>3ero Secundaria y Prepa | EXANI II - Practica sin presión, con pasos poco a poco</p>
+    <span class="etiqueta-nivel">SECUNDARIA • PREPARATORIA • EXANI-II</span>
+</div>
+
+<div class="contenido">
+
+    <!-- ========== VIDEO YOUTUBE ========== -->
+    <section class="bloque bloque-video">
+        <h2>▶ Video de Instrucción // Mira antes de practicar</h2>
+        <p class="sub-video">Potencia = multiplicar el mismo número varias veces. Raíz = lo contrario: ¿qué número multiplicado por sí mismo da esto?</p>
+
+        <div class="video-responsive">
+            <iframe src="https://www.youtube.com/embed/8pJDgswUzYI"
+                title="Potencias y Raíces - Matemáticas"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+
+        <a href="https://www.youtube.com/watch?v=8pJDgswUzYI" target="_blank" class="link-youtube">Ver en YouTube →</a>
+    </section>
+
+    <!-- ========== JUEGO / PRÁCTICA ========== -->
+    <div class="bloque bloque-juego">
+
+        <p class="marcador">
+            Practicadas: <span id="practicadas">0</span> |
+            Correctas: <span id="correctas">0</span> ✅ |
+            Nivel: <span id="nivel">1</span>
+        </p>
+        <p id="tipo" class="tipo-nivel">Categoría: Todas - Cuadrados, cubos, raíces y leyes</p>
+
+        <!-- INFO DEL TEMA -->
+        <div id="info-tema" class="info-tema">
+            <b class="titulo-info">📚 ¿Qué estás practicando?</b>
+            <p id="info-texto" class="texto-info">
+                Elige una categoría y presiona PRACTICAR. Aquí no pierdes vidas, aprendes con pasos.
+            </p>
+        </div>
+
+        <h2 id="operacion" class="operacion-juego">Presiona PRACTICAR</h2>
+        <p id="pista" class="pista-juego"></p>
+
+        <!-- PASOS POCO A POCO -->
+        <div id="zona-pasos" class="zona-pasos">
+            <b class="titulo-pasos">📝 Paso a paso:</b>
+            <div id="lista-pasos" class="lista-pasos"></div>
+            <button id="btn-siguiente-paso" class="btn-aventura">Ver siguiente paso ➡️</button>
+            <button id="btn-ver-todos" class="btn-aventura">Ver todos los pasos</button>
+            <p id="pasos-contador" class="pasos-contador"></p>
+        </div>
+
+        <div id="zona-input" class="zona-input">
+            <input type="number" id="respuesta" step="any" class="ejercicio-input" placeholder="Resultado">
+            <br><br>
+            <button id="btn-comprobar-respuesta" class="btn-comprobar">COMPROBAR</button>
+            <button id="btn-ayuda" class="btn-aventura">Necesito ayuda 💡</button>
+        </div>
+
+        <button id="btn-start" class="btn-comprobar">PRACTICAR ▶</button>
+
+        <p id="feedback" class="feedback-juego"></p>
+        <p id="fin" class="mensaje-final"></p>
+        <p id="resultado" class="resultado-juego"></p>
+
+        <br>
+        <p class="sub-bloque">Elige qué practicar:</p>
+        <p class="botones-nivel">
+            <button id="btn-todas" class="btn-aventura btn-nivel activo">Todas</button>
+            <button id="btn-cuadrados" class="btn-aventura btn-nivel">Cuadrados</button>
+            <button id="btn-cubos" class="btn-aventura btn-nivel">Cubos</button>
+            <button id="btn-raices" class="btn-aventura btn-nivel">Raíces</button>
+            <button id="btn-leyes" class="btn-aventura btn-nivel">Leyes de exponentes</button>
+        </p>
+
+        <button id="btn-siguiente" class="btn-aventura">Siguiente ejercicio ⏭️</button>
+
+    </div>
+
+    <!-- ========== INFO SECUNDARIA ========== -->
+    <div class="bloque">
+        <h2>🎯 3ero Secundaria - Lo básico que sí sale</h2>
+
+        <h3>1. Cuadrado - a²</h3>
+        <ul>
+            <li><b>a² = a × a</b> → 7² = 7 × 7 = 49</li>
+            <li>Apréndete estos: 2²=4, 3²=9, 4²=16, 5²=25, 6²=36, 7²=49, 8²=64, 9²=81, 10²=100, 12²=144, 15²=225</li>
+        </ul>
+
+        <h3>2. Cubo - a³</h3>
+        <ul>
+            <li><b>a³ = a × a × a</b> → 3³ = 3 × 3 × 3 = 27</li>
+            <li>Apréndete: 2³=8, 3³=27, 4³=64, 5³=125</li>
+        </ul>
+
+        <h3>3. Raíz cuadrada - √a</h3>
+        <ul>
+            <li><b>√a = ¿qué número × sí mismo = a?</b></li>
+            <li>√49 = 7 porque 7 × 7 = 49</li>
+            <li>√144 = 12 porque 12 × 12 = 144</li>
+        </ul>
+    </div>
+
+    <!-- ========== INFO PREPA / EXANI ========== -->
+    <div class="bloque bloque-prepa">
+        <h2>🎓 Prepa / EXANI-II - Leyes de exponentes</h2>
+
+        <h3>1. Multiplicación - Misma base, se suman exponentes</h3>
+        <ul>
+            <li><b>aᵐ × aⁿ = aᵐ⁺ⁿ</b> → 2³ × 2² = 2⁵ = 32</li>
+            <li>Paso a paso: 2³ = 8, 2² = 4, 8 × 4 = 32</li>
+        </ul>
+
+        <h3>2. División - Misma base, se restan exponentes</h3>
+        <ul>
+            <li><b>aᵐ ÷ aⁿ = aᵐ⁻ⁿ</b> → 3⁵ ÷ 3² = 3³ = 27</li>
+        </ul>
+
+        <h3>3. Potencia de potencia - Se multiplican exponentes</h3>
+        <ul>
+            <li><b>(aᵐ)ⁿ = aᵐˣⁿ</b> → (2³)² = 2⁶ = 64</li>
+        </ul>
+
+        <h3>4. Diferencia de cuadrados - La favorita de EXANI</h3>
+        <ul>
+            <li><b>a² - b² = (a + b)(a - b)</b></li>
+            <li>Ej: 9² - 5² = (9 + 5)(9 - 5) = 14 × 4 = 56</li>
+            <li>Comprueba: 81 - 25 = 56 ✅</li>
+        </ul>
+
+        <h3>5. Exponente 0 y 1</h3>
+        <ul>
+            <li><b>a⁰ = 1</b> (cualquier número a la 0 es 1) → 7⁰ = 1</li>
+            <li><b>a¹ = a</b> → 9¹ = 9</li>
+        </ul>
+    </div>
+
+    <div class="bloque">
+        <h2>🎮 ACORDEÓN PARA EXAMEN</h2>
+        <div class="pregunta-box">
+            <p class="texto-acordeon">
+                <b>a² =</b> a × a | <b>a³ =</b> a × a × a<br>
+                <b>√a =</b> ¿qué × qué = a?<br>
+                <b>aᵐ × aⁿ =</b> aᵐ⁺ⁿ | <b>aᵐ ÷ aⁿ =</b> aᵐ⁻ⁿ<br>
+                <b>(aᵐ)ⁿ =</b> aᵐˣⁿ<br>
+                <b>a² - b² =</b> (a + b)(a - b)<br>
+                <b>a⁰ = 1</b>
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<a href="{{ url_for('operaciones_matematicas') }}" class="volver-orto">✦ Volver</a>
+
+<script src="{{ url_for('static', filename='js/potencias_y_raices.js') }}"></script>
+
+</body>
+</html>

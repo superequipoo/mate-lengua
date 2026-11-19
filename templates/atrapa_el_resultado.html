@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atrapa el Resultado - Matemáticas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+
+<div class="portada">
+    <span class="etiqueta">MATEMÁTICAS // VIDEOJUEGO</span>
+    <h1>ATRAPA <span>EL RESULTADO</span></h1>
+    <p>3ero Secundaria y Prepa | EXANI II - Haz clic en el globo con la respuesta correcta</p>
+    <span class="etiqueta-nivel">SECUNDARIA • PREPARATORIA • EXANI-II</span>
+</div>
+
+<div class="contenido">
+        </div>
+
+        <a href="https://www.youtube.com/watch?v=8pJDgswUzYI" target="_blank" class="link-youtube">Ver en YouTube →</a>
+    </section>
+
+    <!-- ========== JUEGO ========== -->
+    <div class="bloque bloque-juego">
+
+        <p class="marcador">
+            Tiempo: <span id="tiempo">60</span>s |
+            Puntos: <span id="puntos">0</span> |
+            Vidas: <span id="vidas">3</span> ❤️ |
+            Racha: <span id="racha">0</span> 🔥
+        </p>
+        <p id="tipo" class="tipo-nivel">Nivel: Secundaria 3ero - Operaciones básicas</p>
+
+        <h2 id="pregunta" class="pregunta-juego">Presiona JUGAR</h2>
+
+        <div id="area" class="area-juego">
+            <div id="centro" class="centro-juego">
+                <button id="btn-jugar" class="btn-comprobar">JUGAR ▶</button>
+                <p class="ayuda-juego">Los globos caen, atrapa solo el correcto</p>
+            </div>
+        </div>
+
+        <br>
+        <p class="botones-nivel">
+            <button id="btn-secundaria" class="btn-aventura btn-nivel activo">Secundaria 3ero</button>
+            <button id="btn-prepa" class="btn-aventura btn-nivel">Prepa</button>
+            <button id="btn-exani" class="btn-aventura btn-nivel">EXANI</button>
+        </p>
+
+        <p id="fin" class="mensaje-final"></p>
+        <p id="resultado" class="resultado-juego"></p>
+
+    </div>
+
+    <!-- ========== INFO SECUNDARIA ========== -->
+    <div class="bloque">
+        <h2>🎯 Nivel Secundaria 3ero - Cómo no fallar</h2>
+        <ul>
+            <li><b>Primero resuelve, luego busca.</b> Si persigues globos sin saber la respuesta, pierdes vidas.</li>
+            <li><b>Suma / Resta:</b> Redondea. Ej: 58 + 27 = 60 + 27 - 2 = 85</li>
+            <li><b>Multiplicación:</b> 7 × 8 = 56. Apréndete las tablas del 6, 7 y 8, son las que más salen.</li>
+            <li><b>División:</b> Piensa al revés. 56 ÷ 7 = ¿7 × qué = 56? = 8</li>
+            <li><b>Si el globo correcto ya pasó,</b> no hagas clic en otro por desesperación. Espera al siguiente.</li>
+        </ul>
+    </div>
+
+    <!-- ========== INFO PREPA / EXANI ========== -->
+    <div class="bloque bloque-prepa">
+        <h2>🎓 Nivel Preparatoria / EXANI-II - Lo que te ponen</h2>
+
+        <h3>1. Porcentajes - Lo más rápido</h3>
+        <ul>
+            <li><b>10%:</b> Quita un cero → 10% de 180 = 18</li>
+            <li><b>50%:</b> ÷ 2 → 50% de 180 = 90</li>
+            <li><b>25%:</b> ÷ 4 → 25% de 180 = 45</li>
+        </ul>
+
+        <h3>2. Jerarquía - No te dejes engañar</h3>
+        <ul>
+            <li>Primero ( ) → luego × ÷ → al final + -</li>
+            <li>Ej: 5 + 2 × 6 = 5 + 12 = 17, NO 42</li>
+            <li>Los globos malos casi siempre son el resultado si haces la cuenta de izquierda a derecha.</li>
+        </ul>
+
+        <h3>3. Truco EXANI: Descarta</h3>
+        <ul>
+            <li>Si la pregunta es 12 × 5, la respuesta termina en 0. Descarta los globos que no terminen en 0.</li>
+            <li>Si es 15% de 200, la respuesta es menor que 200. Descarta los más grandes.</li>
+        </ul>
+    </div>
+
+    <div class="bloque">
+        <h2>🎮 ACORDEÓN PARA EXAMEN</h2>
+        <div class="pregunta-box">
+            <p class="texto-acordeon">
+                <b>Primero:</b> Resuelve en tu mente<br>
+                <b>Luego:</b> Busca solo ese globo<br>
+                <b>× 5:</b> ÷ 2 y agrega 0<br>
+                <b>10%:</b> Quita un cero<br>
+                <b>Jerarquía:</b> ( ) → × ÷ → + -
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<a href="{{ url_for('juegos_matematicas') }}" class="volver-orto">✦ Volver</a>
+
+<script src="{{ url_for('static', filename='js/atrapa_el_resultado.js') }}"></script>
+
+</body>
+</html>

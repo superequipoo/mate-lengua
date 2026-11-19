@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuarios Registrados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+
+    <div class="caja">
+        <h2 class="titulo">PERSONAS REGISTRADAS // {{ usuarios|length }}</h2>
+
+        {% if usuarios %}
+        <table class="tabla-usuarios">
+            <tr>
+                <th>#</th>
+                <th>NOMBRE COMPLETO</th>
+                <th>USUARIO</th>
+                <th>CORREO TÁCTICO</th>
+            </tr>
+            {% for u in usuarios %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ u.nombre }}</td>
+                <td>{{ u.usuario }}</td>
+                <td>{{ u.correo }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+            <p class="vacio">Todavía no hay nadie registrado :(</p>
+        {% endif %}
+
+        <a href="{{ url_for('index') }}" class="link-volver">VOLVER AL INICIO</a>
+    </div>
+
+</body>
+</html>

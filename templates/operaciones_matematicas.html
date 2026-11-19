@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones | Matemáticas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+
+<header class="top-gram">
+    <h2>APRENDE <span>MAS</span> // OPERACIONES</h2>
+</header>
+
+<div class="gramatica-wrapper">
+    <a href="{{ url_for('matematicas') }}" class="volver-gram">✦ Volver a Matemáticas</a>
+
+    <div class="gramatica-header">
+        <span class="sobrelinea">BLOQUE 02 DE 03 / PRÁCTICA - 3ERO SECUNDARIA Y PREPA</span>
+        <h1>Operaciones Tácticas ➗</h1>
+        <p>Todo lo que sale en EXANI II y COMIPEMS: sin suma simple, puro nivel 3ero y prepa.</p>
+    </div>
+
+    <div class="grid-gramatica">
+
+        <div class="card-gram borde-azul">
+            <span class="badge-gram medio">3ERO SECUNDARIA</span>
+            <h3>✖️ Potencias y Raíces</h3>
+            <p class="desc">a², a³, √a, diferencia de cuadrados a²-b². Sin calculadora.</p>
+            <p class="meta">⏱ 8 min | ✦ Potenciación | Nivel 3</p>
+            <a href="{{ url_for('potencias_y_raizez') }}" class="btn-gram">Practicar →</a>
+        </div>
+
+        <div class="card-gram borde-amarillo">
+            <span class="badge-gram medio">PREPA</span>
+            <h3>➗ Fracciones y Decimales Tácticos</h3>
+            <p class="desc">a/b + c/b, a/b con decimales, a * 0.b. Conversión fracción-decimal.</p>
+            <p class="meta">⏱ 10 min | ✦ Fracciones | Nivel Prepa</p>
+            <a href="{{ url_for('fracciones_y_decimales_tacticos') }}" class="btn-gram">Practicar →</a>
+        </div>
+
+        <div class="card-gram borde-morado">
+            <span class="badge-gram dificil">PREPA / EXANI</span>
+            <h3>🔢 Porcentajes y Descuentos</h3>
+            <p class="desc">10%, 25%, 30%, 75% de N, y problema inverso: p% de ? = N + descuentos reales.</p>
+            <p class="meta">⏱ 12 min | ✦ 15 ejercicios | COMIPEMS / EXANI-II</p>
+            <a href="{{ url_for('porsentajes_y_descuentos') }}" class="btn-gram">Practicar →</a>
+        </div>
+
+        <div class="card-gram borde-rojo">
+            <span class="badge-gram dificil">PREPA</span>
+            <h3>🧩 Álgebra + Pitágoras</h3>
+            <p class="desc">ax + b = cx + d, x² = a, catetos a y b → hipotenusa. Producto (ax)(b).</p>
+            <p class="meta">⏱ 15 min | ✦ 15 ejercicios | EXANI-II</p>
+            <a href="{{ url_for('algebra_y_pitagoras') }}" class="btn-gram">Practicar →</a>
+        </div>
+
+    </div>
+
+    <p class="nota-final">TIP: En EXANI no hagas la cuenta completa. Busca el truco: 10% quita un cero, 25% divide entre 4, y en Pitágoras busca el 3-4-5.</p>
+
+</div>
+
+</body>
+</html>

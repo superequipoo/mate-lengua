@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo Veloz - Matemáticas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+
+<div class="portada">
+    <span class="etiqueta">MATEMÁTICAS // VIDEOJUEGO</span>
+    <h1>CÁLCULO <span>VELOZ</span></h1>
+    <p>3ero Secundaria y Prepa | EXANI II - ¿Cuántas puedes hacer en 60 segundos?</p>
+    <span class="etiqueta-nivel">SECUNDARIA • PREPARATORIA • EXANI-II</span>
+</div>
+
+<div class="contenido">
+
+        </div>
+
+        <a href="https://www.youtube.com/watch?v=8pJDgswUzYI" target="_blank" class="link-youtube">Ver en YouTube →</a>
+    </section>
+
+    <!-- ========== JUEGO ========== -->
+    <div class="bloque bloque-juego">
+
+        <p class="marcador">
+            Tiempo: <span id="tiempo">60</span>s |
+            Puntos: <span id="puntos">0</span> |
+            Racha: <span id="racha">0</span> 🔥
+        </p>
+        <p id="tipo" class="tipo-nivel">Nivel: EXANI II</p>
+
+        <h2 id="pregunta" class="pregunta-juego">Presiona JUGAR</h2>
+
+        <div id="opciones" class="zona-opciones">
+            <button id="btn-jugar" class="btn-comprobar">JUGAR ▶</button>
+        </div>
+
+        <br>
+        <p class="sub-bloque">Elige tu nivel antes de jugar:</p>
+        <p class="botones-nivel">
+            <button id="btn-secundaria" class="btn-aventura btn-nivel activo">Secundaria 3ero</button>
+            <button id="btn-prepa" class="btn-aventura btn-nivel">Prepa</button>
+            <button id="btn-exani" class="btn-aventura btn-nivel">EXANI</button>
+        </p>
+
+        <p id="final" class="mensaje-final"></p>
+        <p id="resultado" class="resultado-juego"></p>
+
+    </div>
+
+    <!-- ========== INFO SECUNDARIA ========== -->
+    <div class="bloque">
+        <h2>🎯 Nivel Secundaria 3ero - Trucos rápidos</h2>
+        <ul>
+            <li><b>Suma / Resta:</b> Redondea. Ej: 49 + 32 = 50 + 32 - 1 = 81</li>
+            <li><b>Multiplicación por 5:</b> Divide entre 2 y agrega 0. Ej: 18 × 5 = 9 + 0 = 90</li>
+            <li><b>Multiplicación por 10 / 100:</b> Solo agrega ceros. Ej: 23 × 100 = 2300</li>
+            <li><b>División:</b> Piensa al revés. Ej: 72 ÷ 8 = ¿8 × qué = 72? = 9</li>
+            <li><b>Signos:</b> - × - = + | + × - = - | - ÷ - = +</li>
+        </ul>
+    </div>
+
+    <!-- ========== INFO PREPA / EXANI ========== -->
+    <div class="bloque bloque-prepa">
+        <h2>🎓 Nivel Preparatoria / EXANI-II - Lo que te ponen</h2>
+
+        <h3>1. Porcentajes - La pregunta #1 de EXANI</h3>
+        <ul>
+            <li><b>10%:</b> Quita un cero. Ej: 10% de 240 = 24</li>
+            <li><b>50%:</b> Divide entre 2. Ej: 50% de 240 = 120</li>
+            <li><b>25%:</b> Divide entre 4. Ej: 25% de 240 = 60</li>
+            <li><b>20%:</b> Divide entre 5. Ej: 20% de 240 = 48</li>
+        </ul>
+
+        <h3>2. Fracciones rápidas</h3>
+        <ul>
+            <li><b>1/2 de:</b> Divide entre 2 | <b>1/4 de:</b> Divide entre 4</li>
+            <li><b>3/4 de 80:</b> 80 ÷ 4 = 20, 20 × 3 = 60</li>
+        </ul>
+
+        <h3>3. Jerarquía de operaciones</h3>
+        <ul>
+            <li>Primero ( ) → luego × ÷ → al final + -</li>
+            <li>Ej: 2 + 3 × 4 = 2 + 12 = 14, NO 20</li>
+        </ul>
+
+        <h3>4. Cómo se pregunta en EXANI-II</h3>
+        <ul>
+            <li>“¿Cuánto es el 20% de 150?” → 150 ÷ 5 = 30</li>
+            <li>“Si 3 × ___ = 36, ¿cuánto vale ___?” → 36 ÷ 3 = 12</li>
+        </ul>
+    </div>
+
+    <div class="bloque">
+        <h2>🎮 ACORDEÓN PARA EXAMEN</h2>
+        <div class="pregunta-box">
+            <p class="texto-acordeon">
+                <b>× 5:</b> ÷ 2 y agrega 0<br>
+                <b>10%:</b> Quita un cero<br>
+                <b>50%:</b> ÷ 2<br>
+                <b>25%:</b> ÷ 4<br>
+                <b>Primero:</b> ( ) → × ÷ → + -<br>
+                <b>Signos:</b> - × - = +
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<a href="{{ url_for('juegos_matematicas') }}" class="volver-orto">✦ Volver</a>
+
+<script src="{{ url_for('static', filename='js/calculo_veloz.js') }}"></script>
+
+</body>
+</html>

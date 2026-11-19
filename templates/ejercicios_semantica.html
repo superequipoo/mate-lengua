@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semántica | Ejercicios</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+
+<header class="top-gram">
+    <h2>APRENDE <span>MAS</span> // SEMÁNTICA</h2>
+</header>
+
+<div class="gramatica-wrapper">
+    <a href="{{ url_for('ejercicios_lengua') }}" class="volver-gram">✦ Volver al Banco</a>
+
+    <div class="gramatica-header">
+        <span class="sobrelinea">BLOQUE 4 DE 6 / BÁSICO</span>
+        <h1>Semántica y Vocabulario 💬</h1>
+        <p>Significado de palabras, relaciones y matices. Muy preguntado en EXANI-II.</p>
+    </div>
+
+    <div class="grid-gramatica">
+
+        <div class="card-gram borde-morado">
+            <span class="badge-gram facil">NIVEL 1</span>
+            <h3>🔄 Sinónimos y Antónimos</h3>
+            <p class="desc">Total, parcial y contextual. 18 ejercicios para ampliar vocabulario.</p>
+            <p class="meta">⏱ 10 min | ✦ 18 preguntas</p>
+            <a href="{{ url_for('sinonimos_antonimos') }}" class="btn-gram">Empezar →</a>
+        </div>
+
+        <div class="card-gram borde-amarillo">
+            <span class="badge-gram dificil">NIVEL 2</span>
+            <h3>👂 Homófonos y Parónimos</h3>
+            <p class="desc">Vaya/valla, tuvo/tubo, aptitud/actitud, revelar/rebelar.</p>
+            <p class="meta">⏱ 12 min | ✦ 20 preguntas | COMIPEMS</p>
+            <a href="{{ url_for('homonimos_paronimos') }}" class="btn-gram">Empezar →</a>
+        </div>
+
+        <div class="card-gram borde-verde">
+            <span class="badge-gram facil">NIVEL 1</span>
+            <h3>🌱 Campo Semántico</h3>
+            <p class="desc">Familia de palabras, campo léxico y campo semántico.</p>
+            <p class="meta">⏱ 8 min | ✦ 15 preguntas</p>
+            <a href="{{ url_for('campo_sematico') }}" class="btn-gram">Empezar →</a>
+        </div>
+
+    </div>
+
+    <p class="nota-final">TIP: No memorices palabras sueltas, aprende familias. Si sabes que "aptitud" es capacidad y "actitud" es comportamiento, ya no te confundes nunca.</p>
+
+</div>
+
+</body>
+</html>

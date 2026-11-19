@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porcentajes y Descuentos - Práctica paso a paso</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+
+<div class="portada">
+    <span class="etiqueta">MATEMÁTICAS // PRÁCTICA</span>
+    <h1>PORCENTAJES <span>Y DESCUENTOS</span></h1>
+    <p>3ero Secundaria y Prepa | EXANI II - Practica sin presión, con pasos poco a poco</p>
+    <span class="etiqueta-nivel">SECUNDARIA • PREPARATORIA • EXANI-II</span>
+</div>
+
+<div class="contenido">
+
+    <!-- ========== VIDEO YOUTUBE ========== -->
+    <section class="bloque bloque-video">
+        <h2>▶ Video de Instrucción // Mira antes de practicar</h2>
+        <p class="sub-video">Porcentaje = parte de 100. 10% es la décima parte, 50% es la mitad, 25% es la cuarta parte. No multipliques a lo loco, divide.</p>
+
+        <div class="video-responsive">
+            <iframe src="https://www.youtube.com/embed/8pJDgswUzYI"
+                title="Porcentajes y Descuentos - Matemáticas"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+
+        <a href="https://www.youtube.com/watch?v=8pJDgswUzYI" target="_blank" class="link-youtube">Ver en YouTube →</a>
+    </section>
+
+    <!-- ========== PRÁCTICA ========== -->
+    <div class="bloque bloque-juego">
+
+        <p class="marcador">
+            Practicadas: <span id="practicadas">0</span> |
+            Correctas: <span id="correctas">0</span> ✅ |
+            Nivel: <span id="nivel">1</span>
+        </p>
+        <p id="tipo" class="tipo-nivel">Categoría: Todas - Básico, táctico, descuentos e inverso</p>
+
+        <!-- INFO DEL TEMA -->
+        <div id="info-tema" class="info-tema">
+            <b class="titulo-info">📚 ¿Qué estás practicando?</b>
+            <p id="info-texto" class="texto-info">
+                Elige una categoría y presiona PRACTICAR. Aquí no pierdes vidas, aprendes con pasos.
+            </p>
+        </div>
+
+        <h2 id="operacion" class="operacion-juego">Presiona PRACTICAR</h2>
+        <p id="pista" class="pista-juego"></p>
+
+        <!-- PASOS POCO A POCO -->
+        <div id="zona-pasos" class="zona-pasos">
+            <b class="titulo-pasos">📝 Paso a paso:</b>
+            <div id="lista-pasos" class="lista-pasos"></div>
+            <button id="btn-siguiente-paso" class="btn-aventura" type="button">Ver siguiente paso ➡️</button>
+            <button id="btn-ver-todos" class="btn-aventura" type="button">Ver todos los pasos</button>
+            <p id="pasos-contador" class="pasos-contador"></p>
+        </div>
+
+        <div id="zona-input" class="zona-input">
+            <input type="number" id="respuesta" step="any" class="ejercicio-input" placeholder="Solo el número, sin $ ni %">
+            <br>
+            <p class="ayuda-input">Escribe solo el número. Ej: si la respuesta es $240, escribe 240</p>
+            <button id="btn-comprobar-respuesta" class="btn-comprobar" type="button">COMPROBAR</button>
+            <button id="btn-ayuda" class="btn-aventura" type="button">Necesito ayuda 💡</button>
+        </div>
+
+        <button id="btn-start" class="btn-comprobar" type="button">PRACTICAR ▶</button>
+
+        <p id="feedback" class="feedback-juego"></p>
+        <p id="resultado" class="resultado-juego"></p>
+
+        <br>
+        <p class="sub-bloque">Elige qué practicar:</p>
+        <p class="botones-nivel">
+            <button id="btn-todas" class="btn-aventura btn-nivel activo" type="button">Todas</button>
+            <button id="btn-basico" class="btn-aventura btn-nivel" type="button">Básico %</button>
+            <button id="btn-tactico" class="btn-aventura btn-nivel" type="button">Táctico EXANI</button>
+            <button id="btn-descuento" class="btn-aventura btn-nivel" type="button">Descuentos</button>
+            <button id="btn-inverso" class="btn-aventura btn-nivel" type="button">Inverso</button>
+        </p>
+
+        <button id="btn-siguiente" class="btn-aventura" type="button">Siguiente ejercicio ⏭️</button>
+
+    </div>
+
+    <!-- ========== INFO SECUNDARIA ========== -->
+    <div class="bloque">
+        <h2>🎯 3ero Secundaria - Lo básico que sí sale</h2>
+
+        <h3>1. ¿Qué es %?</h3>
+        <ul>
+            <li><b>% = de cada 100.</b> 50% = 50 de cada 100 = la mitad.</li>
+            <li>Fórmula: (porcentaje ÷ 100) × número</li>
+            <li>Ej: 20% de 150 = 20 ÷ 100 × 150 = 30</li>
+        </ul>
+
+        <h3>2. Los 4 que te tienes que saber de memoria</h3>
+        <ul>
+            <li><b>10%:</b> Quita un cero → 10% de 240 = 24</li>
+            <li><b>50%:</b> ÷ 2 → 50% de 240 = 120</li>
+            <li><b>25%:</b> ÷ 4 → 25% de 240 = 60</li>
+            <li><b>20%:</b> ÷ 5 → 20% de 240 = 48</li>
+        </ul>
+    </div>
+
+    <!-- ========== INFO PREPA / EXANI ========== -->
+    <div class="bloque bloque-prepa">
+        <h2>🎓 Prepa / EXANI-II - Lo táctico</h2>
+
+        <h3>1. Táctico EXANI - Sin calculadora</h3>
+        <ul>
+            <li><b>30%:</b> 10% × 3 → 30% de 200 = 20 × 3 = 60</li>
+            <li><b>75%:</b> 50% + 25% → 75% de 200 = 100 + 50 = 150</li>
+            <li><b>15%:</b> 10% + 5% → 15% de 200 = 20 + 10 = 30</li>
+        </ul>
+
+        <h3>2. Descuentos - 2 preguntas en 1</h3>
+        <ul>
+            <li><b>Descuento:</b> Precio × % → $400 con 20% = $400 × 0.20 = $80 de descuento</li>
+            <li><b>Precio final:</b> Precio - Descuento → $400 - $80 = $320</li>
+            <li><b>Truco:</b> Si descuentan 20%, pagas el 80% → $400 × 0.80 = $320 directo</li>
+        </ul>
+
+        <h3>3. Inverso - El que más falla en EXANI</h3>
+        <ul>
+            <li>“El 20% de ¿qué número? es 40” → 40 ÷ 0.20 = 200</li>
+            <li>“El 25% de ¿qué? es 30” → 30 ÷ 0.25 = 120 (30 × 4)</li>
+            <li>Regla: Si te dan el resultado, DIVIDE, no multipliques.</li>
+        </ul>
+
+        <h3>4. Cómo se pregunta en EXANI-II</h3>
+        <ul>
+            <li>“Una camisa de $350 tiene 30% de descuento, ¿cuánto pagas?” → Pagas 70% → 350 × 0.70 = 245</li>
+            <li>“¿Qué % es 30 de 120?” → 30 ÷ 120 = 0.25 = 25%</li>
+        </ul>
+    </div>
+
+    <div class="bloque">
+        <h2>🎮 ACORDEÓN PARA EXAMEN</h2>
+        <div class="pregunta-box">
+            <p class="texto-acordeon">
+                <b>10%:</b> Quita un cero | <b>50%:</b> ÷ 2 | <b>25%:</b> ÷ 4 | <b>20%:</b> ÷ 5<br>
+                <b>30%:</b> 10% × 3 | <b>75%:</b> 50% + 25%<br>
+                <b>Descuento:</b> Precio × %<br>
+                <b>Precio final:</b> Precio - Descuento / o paga (100% - %)<br>
+                <b>Inverso:</b> Si te dan el resultado, DIVIDE
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<a href="{{ url_for('operaciones_matematicas') }}" class="volver-orto">✦ Volver</a>
+
+<script src="{{ url_for('static', filename='js/porcentajes_y_descuentos.js') }}"></script>
+
+</body>
+</html>

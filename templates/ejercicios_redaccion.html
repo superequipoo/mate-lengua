@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redacción | Ejercicios</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+
+<header class="top-gram">
+    <h2>APRENDE <span>MAS</span> // REDACCIÓN</h2>
+</header>
+
+<div class="gramatica-wrapper">
+    <a href="{{ url_for('ejercicios_lengua') }}" class="volver-gram">✦ Volver al Banco</a>
+
+    <div class="gramatica-header">
+        <span class="sobrelinea">BLOQUE 6 DE 6 / DIFÍCIL</span>
+        <h1>Redacción y Estructura ✍️</h1>
+        <p>Escribe bien, conecta ideas y arma textos que se entiendan. Clave para tu ensayo.</p>
+    </div>
+
+    <div class="grid-gramatica">
+
+        <div class="card-gram borde-verde">
+            <span class="badge-gram facil">NIVEL 1</span>
+            <h3>📄 Tipos de Texto</h3>
+            <p class="desc">Narrativo, descriptivo, expositivo, argumentativo e instructivo.</p>
+            <p class="meta">⏱ 10 min | ✦ 12 preguntas</p>
+            <a href="{{ url_for('tipos_de_texto') }}" class="btn-gram">Empezar →</a>
+        </div>
+
+        <div class="card-gram borde-azul">
+            <span class="badge-gram medio">NIVEL 2</span>
+            <h3>🔗 Conectores Lógicos</h3>
+            <p class="desc">Sin embargo, por lo tanto, además, en cambio, es decir.</p>
+            <p class="meta">⏱ 10 min | ✦ 1-5 preguntas | EXANI</p>
+            <a href="{{ url_for('conectores_logicos') }}" class="btn-gram">Empezar →</a>
+        </div>
+
+        <div class="card-gram borde-amarillo">
+            <span class="badge-gram dificil">NIVEL 3</span>
+            <h3>🧩 Coherencia y Cohesión</h3>
+            <p class="desc">Ordena párrafos, corrige vicios de redacción y repeticiones.</p>
+            <p class="meta">⏱ 15 min | ✦ 10 ejercicios</p>
+            <a href="{{ url_for('coherencia_cohesion') }}" class="btn-gram">Empezar →</a>
+        </div>
+
+    </div>
+
+    <p class="nota-final">TIP: Un texto bien escrito no es el más largo, es el más claro. Una idea por párrafo y conéctalos con sin embargo, además o por lo tanto.</p>
+
+</div>
+
+</body>
+</html>

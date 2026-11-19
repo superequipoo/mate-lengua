@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rompe la Ecuación - Matemáticas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+
+<div class="portada">
+    <span class="etiqueta">MATEMÁTICAS // VIDEOJUEGO</span>
+    <h1>ROMPE <span>LA ECUACIÓN</span></h1>
+    <p>3ero Secundaria y Prepa | EXANI II - Despeja la X y rompe el candado</p>
+    <span class="etiqueta-nivel">SECUNDARIA • PREPARATORIA • EXANI-II</span>
+</div>
+
+<div class="contenido">
+
+    <!-- ========== JUEGO ========== -->
+    <div class="bloque bloque-juego">
+
+        <p class="marcador">
+            Nivel: <span id="nivel">1</span> |
+            Vidas: <span id="vidas">3</span> ❤️ |
+            Puntos: <span id="puntos">0</span> |
+            Tiempo: <span id="tiempo">90</span>s
+        </p>
+        <p id="tipo" class="tipo-nivel">Modo: Secundaria 3ero - Ecuaciones de 1 paso</p>
+
+        <h2 id="ecuacion" class="ecuacion-juego">Presiona INICIAR</h2>
+        <p id="pista" class="pista-juego"></p>
+
+        <div id="zona-input" class="zona-input">
+            <input type="number" id="respuesta" class="ejercicio-input" placeholder="x = ?">
+            <br><br>
+            <button id="btn-comprobar-respuesta" class="btn-comprobar">ROMPER 💥</button>
+        </div>
+
+        <button id="btn-start" class="btn-comprobar">INICIAR ▶</button>
+
+        <p id="feedback" class="feedback-juego"></p>
+        <p id="fin" class="mensaje-final"></p>
+        <p id="resultado" class="resultado-juego"></p>
+
+        <br>
+        <p class="botones-nivel">
+            <button id="btn-secundaria" class="btn-aventura btn-nivel activo">Secundaria 3ero</button>
+            <button id="btn-prepa" class="btn-aventura btn-nivel">Prepa</button>
+            <button id="btn-exani" class="btn-aventura btn-nivel">EXANI</button>
+        </p>
+
+    </div>
+
+    <!-- ========== INFO SECUNDARIA ========== -->
+    <div class="bloque">
+        <h2>🎯 Nivel Secundaria 3ero - Despeja en 1 paso</h2>
+        <ul>
+            <li><b>Regla de oro:</b> Lo que está de un lado, pasa al otro haciendo LO CONTRARIO.</li>
+            <li><b>Si suma → pasa restando:</b> x + 5 = 12 → x = 12 - 5 = 7</li>
+            <li><b>Si resta → pasa sumando:</b> x - 4 = 9 → x = 9 + 4 = 13</li>
+            <li><b>Si multiplica → pasa dividiendo:</b> 3x = 21 → x = 21 ÷ 3 = 7</li>
+            <li><b>Si divide → pasa multiplicando:</b> x ÷ 2 = 6 → x = 6 × 2 = 12</li>
+        </ul>
+        <div class="pregunta-box">
+            <b>TRUCO:</b> Siempre comprueba: mete tu x en la ecuación original. ¿Da igual de los dos lados? Entonces está bien.
+        </div>
+    </div>
+
+    <!-- ========== INFO PREPA / EXANI ========== -->
+    <div class="bloque bloque-prepa">
+        <h2>🎓 Nivel Preparatoria / EXANI-II - Lo que te ponen</h2>
+
+        <h3>1. Ecuaciones de 2 pasos</h3>
+        <ul>
+            <li>Primero pasa lo que SUMA / RESTA, luego lo que MULTIPLICA.</li>
+            <li>Ej: 2x + 5 = 15 → 2x = 15 - 5 = 10 → x = 10 ÷ 2 = 5</li>
+            <li>Ej: 4x - 3 = 13 → 4x = 13 + 3 = 16 → x = 16 ÷ 4 = 4</li>
+        </ul>
+
+        <h3>2. X en los dos lados</h3>
+        <ul>
+            <li>Junta las x de un lado y los números del otro.</li>
+            <li>Ej: 3x + 2 = 2x + 9 → 3x - 2x = 9 - 2 → x = 7</li>
+        </ul>
+
+        <h3>3. Cómo se pregunta en EXANI-II</h3>
+        <ul>
+            <li>“¿Cuál es el valor de x en 3x + 7 = 22?” → 3x = 15 → x = 5</li>
+            <li>“Si el doble de un número más 4 es 18, ¿cuál es el número?” → 2x + 4 = 18 → x = 7</li>
+        </ul>
+    </div>
+
+    <div class="bloque">
+        <h2>🎮 ACORDEÓN PARA EXAMEN</h2>
+        <div class="pregunta-box">
+            <p class="texto-acordeon">
+                <b>+ pasa -</b> | <b>- pasa +</b><br>
+                <b>× pasa ÷</b> | <b>÷ pasa ×</b><br>
+                <b>1ero:</b> Pasa lo que suma / resta<br>
+                <b>2do:</b> Pasa lo que multiplica<br>
+                <b>Comprueba:</b> Mete tu x en la original
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<a href="{{ url_for('juegos_matematicas') }}" class="volver-orto">✦ Volver</a>
+
+<script src="{{ url_for('static', filename='js/rompe_la_ecuacion.js') }}"></script>
+
+</body>
+</html>

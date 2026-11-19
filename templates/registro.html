@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+
+    <div class="caja-registro">
+        <h2 class="titulo-registro">REGISTRO // NUEVO RECLUTA</h2>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for cat, msg in messages %}
+              <p class="mensaje-error">{{ msg }}</p>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+
+        <form method="POST" action="{{ url_for('registro') }}">
+            <label for="nombre">NOMBRE COMPLETO</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="usuario">NOMBRE DE USUARIO (para iniciar sesión)</label>
+            <input type="text" id="usuario" name="usuario" required placeholder="ej: juan123">
+
+            <label for="correo">CORREO TÁCTICO</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="password">CONTRASEÑA</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" class="btn-registro">REGISTRARME Y ENTRAR</button>
+        </form>
+
+        <a href="{{ url_for('index') }}" class="link-volver">VOLVER AL INICIO</a>
+    </div>
+
+</body>
+</html>

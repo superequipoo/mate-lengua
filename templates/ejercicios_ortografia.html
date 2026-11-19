@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ortografía | Cómo usarlo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+
+<header class="top-gram">
+    <h2>APRENDE <span>MAS</span> // ORTOGRAFÍA</h2>
+</header>
+
+<div class="gramatica-wrapper">
+    <a href="{{ url_for('ejercicios_lengua') }}" class="volver-gram">✦ Volver al Banco</a>
+
+    <div class="gramatica-header">
+        <span class="sobrelinea">BLOQUE 1 DE 6 / BÁSICO</span>
+        <h1>Ortografía Práctica</h1>
+        <p>Domina B/V, S/C/Z, H y acentuación. Lo que más sale en COMIPEMS y EXANI.</p>
+    </div>
+
+    <div class="grid-gramatica">
+
+        <div class="card-gram borde-verde">
+            <span class="badge-gram facil">NIVEL 1</span>
+            <h3>🅱️ Uso de B y V</h3>
+            <p class="desc">Reglas de -aba, -bir, -buir, -ble, -bilidad y homófonos.</p>
+            <p class="meta">⏱ 10 min | ✦ 20 preguntas</p>
+            <a href="{{ url_for('B_y_V') }}" class="btn-gram">Empezar →</a>
+        </div>
+
+        <div class="card-gram borde-amarillo">
+            <span class="badge-gram medio">NIVEL 2</span>
+            <h3>🐍 Uso de S, C y Z</h3>
+            <p class="desc">Terminaciones -sión, -ción, -oso, -eza, -azo.</p>
+            <p class="meta">⏱ 12 min | ✦ 20 preguntas</p>
+            <a href="{{ url_for('s_c_z') }}" class="btn-gram">Empezar →</a>
+        </div>
+
+        <div class="card-gram borde-rojo">
+            <span class="badge-gram dificil">NIVEL 2</span>
+            <h3>🤫 Uso de la H</h3>
+            <p class="desc">H intercalada, hay, ahí, ay, haya / halla / allá.</p>
+            <p class="meta">⏱ 10 min | ✦ 15 preguntas</p>
+            <a href="{{ url_for('h') }}" class="btn-gram">Empezar →</a>
+        </div>
+
+        <div class="card-gram borde-azul">
+            <span class="badge-gram medio">NIVEL 3</span>
+            <h3>⚡ Acentuación</h3>
+            <p class="desc">Agudas, graves, esdrújulas y diacrítica.</p>
+            <p class="meta">⏱ 15 min | ✦ 25 preguntas</p>
+            <a href="{{ url_for('acentuacion') }}" class="btn-gram">Empezar →</a>
+        </div>
+
+    </div>
+
+    <p class="nota-final">TIP: Empieza por B y V, es la más fácil. Luego S, C y Z. Deja Acentuación al final porque es la que más puntos da en examen.</p>
+
+</div>
+
+</body>
+</html>

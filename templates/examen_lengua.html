@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Final Lengua y Comunicación | Mundo del Saber</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+
+<nav class="barra">
+    <a href="{{ url_for('index') }}" class="marca">
+        <span class="logo">✦</span> Mundo del Saber
+    </a>
+    <a href="{{ url_for('lengua') }}" class="enlace-inicio"> Lengua</a>
+</nav>
+
+<div class="portada portada-morado">
+    <span class="etiqueta">EXAMEN FINAL / LENGUA Y COMUNICACIÓN</span>
+    <h1>EXAMEN <span>DE ORTOGRAFÍA</span></h1>
+    <p>20 preguntas de todo: acentuación, v/b, c/s/z, g/j, h, ll/y y puntuación. ¿Pasas o repruebas?</p>
+    <div class="insignia">📝 20 preguntas | ⏱ 10 minutos | ✅ Para pasar: 14 / 20</div>
+    <span class="etiqueta-nivel">SECUNDARIA • PREPARATORIA • EXANI-II</span>
+</div>
+
+<div class="contenido">
+
+    <!-- ========== VIDEO YOUTUBE ========== -->
+    <section class="bloque bloque-video">
+        <h2>▶ Video rápido // Antes del examen</h2>
+        <p class="sub-video">Repasa en 5 min y luego haz el examen sin mirar. Así sabes de verdad qué te falta.</p>
+
+        <div class="video-responsive">
+            <iframe src="https://www.youtube.com/embed/8pJDgswUzYI"
+                title="Repaso de Ortografía - Examen"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+
+        <a href="https://www.youtube.com/watch?v=8pJDgswUzYI" target="_blank" class="link-youtube">Ver en YouTube →</a>
+    </section>
+
+    <!-- ========== TIPS ========== -->
+    <section class="bloque">
+        <h2>🎯 Cómo pasar este examen</h2>
+        <p class="sub-bloque">No es de memoria, es de truco:</p>
+        <ul>
+            <li><b>Secundaria:</b> Aguda = termina en n/s/vocal y se acentúa. Esdrújula = SIEMPRE se acentúa.</li>
+            <li><b>Preparatoria:</b> “Porque” = causa, “por qué” = pregunta. “Vaya” = ir, “valla” = cerca, “baya” = fruta.</li>
+            <li><b>EXANI:</b> Si dudas entre v/b, piensa en la familia: “vivir → vivo, vivía”. Si dudas en g/j, piensa: “gente, girar, gigante” llevan G.</li>
+        </ul>
+    </section>
+
+    <div class="bloque bloque-examen">
+
+        <p class="examen-meta">
+            Pregunta: <span id="pregunta-actual">0</span>/20 |
+            Aciertos: <span id="aciertos">0</span> |
+            Fallos: <span id="fallos">0</span> |
+            Tiempo: <span id="tiempo">10:00</span> ⏱
+        </p>
+
+        <!-- BARRA DE PROGRESO -->
+        <div class="barra-progreso-wrap">
+            <div id="barra-progreso" class="barra-progreso"></div>
+        </div>
+
+        <p id="tema" class="tema-examen">Tema: -</p>
+
+        <!-- CAJA DE PREGUNTA -->
+        <div class="caja-pregunta">
+            <p class="etiqueta-pregunta">Elige la opción correcta:</p>
+            <h2 id="operacion" class="texto-pregunta">Presiona EMPEZAR EXAMEN</h2>
+            <p id="contexto" class="contexto-pregunta"></p>
+        </div>
+
+        <!-- OPCIONES A B C D -->
+        <div id="zona-opciones" class="zona-opciones">
+            <button id="opcion-0" class="btn-opcion" type="button">A) ...</button>
+            <button id="opcion-1" class="btn-opcion" type="button">B) ...</button>
+            <button id="opcion-2" class="btn-opcion" type="button">C) ...</button>
+            <button id="opcion-3" class="btn-opcion" type="button">D) ...</button>
+            <button id="btn-saltar" class="btn-aventura" type="button">Saltar pregunta ⏭</button>
+        </div>
+
+        <button id="btn-start" class="btn-comprobar" type="button">EMPEZAR EXAMEN ▶</button>
+
+        <p id="feedback" class="feedback-examen"></p>
+
+        <!-- RESULTADO FINAL -->
+        <div id="zona-fin" class="zona-fin">
+            <h3 id="titulo-fin" class="titulo-fin">🏁 Examen terminado</h3>
+            <p id="calificacion" class="calificacion-final">0.0</p>
+            <p id="texto-fin" class="texto-fin"></p>
+            <p id="medalla" class="medalla-final"></p>
+            <div id="resumen-temas" class="resumen-temas"></div>
+            <div id="lista-errores" class="lista-errores"></div>
+            <button id="btn-reintentar" class="btn-comprobar" type="button">VOLVER A HACER EXAMEN ↻</button>
+            <br><br>
+            <a href="{{ url_for('lengua') }}" class="btn-aventura">Volver a Practicar 📚</a>
+        </div>
+
+        <br>
+        <p class="sub-bloque">¿Qué incluye el examen?</p>
+        <p class="info-examen">
+            ✍️ 4 Acentuación &nbsp;|&nbsp; 🅱️ 4 Uso de V y B &nbsp;|&nbsp; 🔤 4 Uso de C, S, Z<br>
+            🔠 4 G/J, H, LL/Y &nbsp;|&nbsp; ✏️ 4 Puntuación y Mayúsculas
+        </p>
+
+    </div>
+</div>
+
+<a href="{{ url_for('lengua') }}" class="volver-orto">✦ Volver a Lengua</a>
+
+<script src="{{ url_for('static', filename='js/examen_lengua.js') }}"></script>
+
+</body>
+</html>

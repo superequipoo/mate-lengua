@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álgebra y Pitágoras - Práctica paso a paso</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+
+<div class="portada">
+    <span class="etiqueta">MATEMÁTICAS // PRÁCTICA</span>
+    <h1>ÁLGEBRA <span>Y PITÁGORAS</span></h1>
+    <p>3ero Secundaria y Prepa | EXANI II - Practica sin presión, con pasos poco a poco</p>
+    <span class="etiqueta-nivel">SECUNDARIA • PREPARATORIA • EXANI-II</span>
+</div>
+
+<div class="contenido">
+
+    <!-- ========== VIDEO YOUTUBE ========== -->
+    <section class="bloque bloque-video">
+        <h2>▶ Video de Instrucción // Mira antes de practicar</h2>
+        <p class="sub-video">Álgebra = despejar la x. Pitágoras = en un triángulo rectángulo, el lado más largo al cuadrado es la suma de los otros dos al cuadrado.</p>
+
+        <div class="video-responsive">
+            <iframe src="https://www.youtube.com/embed/8pJDgswUzYI"
+                title="Álgebra y Pitágoras - Matemáticas"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+
+        <a href="https://www.youtube.com/watch?v=8pJDgswUzYI" target="_blank" class="link-youtube">Ver en YouTube →</a>
+    </section>
+
+    <!-- ========== PRÁCTICA ========== -->
+    <div class="bloque bloque-juego">
+
+        <p class="marcador">
+            Practicadas: <span id="practicadas">0</span> |
+            Correctas: <span id="correctas">0</span> ✅ |
+            Nivel: <span id="nivel">1</span>
+        </p>
+        <p id="tipo" class="tipo-nivel">Categoría: Todas - Lineal, cuadrática, Pitágoras y sistema</p>
+
+        <!-- INFO DEL TEMA -->
+        <div id="info-tema" class="info-tema">
+            <b class="titulo-info">📚 ¿Qué estás practicando?</b>
+            <p id="info-texto" class="texto-info">
+                Elige una categoría y presiona PRACTICAR. Aquí no pierdes vidas, aprendes con pasos.
+            </p>
+        </div>
+
+        <h2 id="operacion" class="operacion-juego">Presiona PRACTICAR</h2>
+        <p id="pista" class="pista-juego"></p>
+
+        <!-- PASOS POCO A POCO -->
+        <div id="zona-pasos" class="zona-pasos">
+            <b class="titulo-pasos">📝 Paso a paso:</b>
+            <div id="lista-pasos" class="lista-pasos"></div>
+            <button id="btn-siguiente-paso" class="btn-aventura" type="button">Ver siguiente paso ➡️</button>
+            <button id="btn-ver-todos" class="btn-aventura" type="button">Ver todos los pasos</button>
+            <p id="pasos-contador" class="pasos-contador"></p>
+        </div>
+
+        <div id="zona-input" class="zona-input">
+            <input type="number" id="respuesta" step="any" class="ejercicio-input" placeholder="Solo el número">
+            <br><br>
+            <button id="btn-comprobar-respuesta" class="btn-comprobar" type="button">COMPROBAR</button>
+            <button id="btn-ayuda" class="btn-aventura" type="button">Necesito ayuda 💡</button>
+        </div>
+
+        <button id="btn-start" class="btn-comprobar" type="button">PRACTICAR ▶</button>
+
+        <p id="feedback" class="feedback-juego"></p>
+        <p id="resultado" class="resultado-juego"></p>
+
+        <br>
+        <p class="sub-bloque">Elige qué practicar:</p>
+        <p class="botones-nivel">
+            <button id="btn-todas" class="btn-aventura btn-nivel activo" type="button">Todas</button>
+            <button id="btn-lineal" class="btn-aventura btn-nivel" type="button">Ecuación Lineal</button>
+            <button id="btn-cuadratica" class="btn-aventura btn-nivel" type="button">Ecuación x²</button>
+            <button id="btn-pitagoras" class="btn-aventura btn-nivel" type="button">Pitágoras</button>
+            <button id="btn-sistema" class="btn-aventura btn-nivel" type="button">Sistema mental</button>
+        </p>
+
+        <button id="btn-siguiente" class="btn-aventura" type="button">Siguiente ejercicio ⏭️</button>
+
+    </div>
+
+    <!-- ========== INFO SECUNDARIA ========== -->
+    <div class="bloque">
+        <h2>🎯 3ero Secundaria - Lo básico que sí sale</h2>
+
+        <h3>1. Ecuación lineal - Despeja la x</h3>
+        <ul>
+            <li><b>Regla:</b> Lo que suma pasa restando, lo que multiplica pasa dividiendo.</li>
+            <li>Ej: 2x + 5 = 15 → 2x = 15 - 5 = 10 → x = 10 ÷ 2 = 5</li>
+        </ul>
+
+        <h3>2. Pitágoras - El triángulo rectángulo</h3>
+        <ul>
+            <li><b>a² + b² = c²</b> → c es la hipotenusa, el lado más largo, el que está frente al ángulo recto.</li>
+            <li>Ej: a = 3, b = 4 → c² = 9 + 16 = 25 → c = 5</li>
+            <li><b>Triángulos que salen siempre:</b> 3-4-5, 6-8-10, 5-12-13</li>
+        </ul>
+    </div>
+
+    <!-- ========== INFO PREPA / EXANI ========== -->
+    <div class="bloque bloque-prepa">
+        <h2>🎓 Prepa / EXANI-II - Lo táctico</h2>
+
+        <h3>1. Ecuación con x en los dos lados</h3>
+        <ul>
+            <li>Junta las x de un lado y los números del otro.</li>
+            <li>Ej: 3x + 2 = 2x + 9 → 3x - 2x = 9 - 2 → x = 7</li>
+        </ul>
+
+        <h3>2. Ecuación x² - Raíz cuadrada</h3>
+        <ul>
+            <li>Si x² = 49 → x = √49 = 7</li>
+            <li>Ej: x² + 5 = 30 → x² = 25 → x = 5</li>
+        </ul>
+
+        <h3>3. Pitágoras para buscar un cateto</h3>
+        <ul>
+            <li>Si te dan la hipotenusa y un cateto: <b>a² = c² - b²</b></li>
+            <li>Ej: c = 13, b = 5 → a² = 169 - 25 = 144 → a = 12</li>
+        </ul>
+
+        <h3>4. Sistema mental - Suma y resta</h3>
+        <ul>
+            <li>Si x + y = 10 y x - y = 2 → Suma las dos: 2x = 12 → x = 6, y = 4</li>
+            <li>Truco EXANI: Suma las ecuaciones y se cancela la y.</li>
+        </ul>
+
+        <h3>5. Cómo se pregunta en EXANI-II</h3>
+        <ul>
+            <li>“¿Cuál es el valor de x en 3x + 7 = 22?” → x = 5</li>
+            <li>“Un triángulo rectángulo tiene catetos 6 y 8, ¿cuánto mide la hipotenusa?” → 10</li>
+        </ul>
+    </div>
+
+    <div class="bloque">
+        <h2>🎮 ACORDEÓN PARA EXAMEN</h2>
+        <div class="pregunta-box">
+            <p class="texto-acordeon">
+                <b>+ pasa -</b> | <b>× pasa ÷</b><br>
+                <b>Pitágoras:</b> a² + b² = c²<br>
+                <b>Buscar hipotenusa:</b> c = √(a² + b²)<br>
+                <b>Buscar cateto:</b> a = √(c² - b²)<br>
+                <b>Triángulos:</b> 3-4-5 | 6-8-10 | 5-12-13<br>
+                <b>x² = N</b> → x = √N
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<a href="{{ url_for('operaciones_matematicas') }}" class="volver-orto">✦ Volver</a>
+
+<script src="{{ url_for('static', filename='js/algebra_pitagoras.js') }}"></script>
+
+</body>
+</html>

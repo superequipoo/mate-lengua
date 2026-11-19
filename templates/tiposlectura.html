@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Lecturas - Mundo del Saber</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/carrusel.js') }}" defer></script>
+
+</head>
+
+<body>
+    <nav class="barra">
+    <a href="{{ url_for('lengua') }}" class="marca">
+        <span class="logo">✦</span> LECTURAS
+    </a>
+    <a href="{{ url_for('lengua') }}" class="enlace-inicio"> Materias</a>
+</nav>
+
+    <!-- TITULO -->
+    <h2 class="titulo-seccion">
+        Explora tus géneros de lectura
+    </h2>
+
+    <a href="{{ url_for('lengua') }}" class="volver-link">✦ Volver</a>
+
+    <!-- CARRUSEL -->
+    <div class="carrusel-contenedor">
+
+        <!-- FLECHA IZQUIERDA -->
+        <button type="button" class="flecha flecha-izq" id="btn-izq">
+            &#10094;
+        </button>
+
+        <!-- FLECHA DERECHA -->
+        <button type="button" class="flecha flecha-der" id="btn-der">
+            &#10095;
+        </button>
+
+        <div class="carrusel">
+
+            <div class="carrusel-pista" id="pista">
+
+                <!-- FANTASIA -->
+                <div class="diapositiva">
+
+                    <img src="{{ url_for('static', filename='img/fantasia.jpeg') }}" alt="Fantasía">
+
+                    <span class="numero">01 / FANTASÍA</span>
+
+                    <h3>Fantasía</h3>
+
+                    <p>
+                        Mundos mágicos, criaturas asombrosas y aventuras imposibles.
+                    </p>
+
+                    <a href="{{ url_for('fantasia') }}" class="btn-aventura">
+                        Leer fantasía
+                    </a>
+
+                </div>
+
+                <!-- MISTERIO -->
+                <div class="diapositiva">
+
+                    <img src="{{ url_for('static', filename='img/misterio.jpeg') }}" alt="Misterio">
+
+                    <span class="numero">02 / MISTERIO</span>
+
+                    <h3>Misterio</h3>
+
+                    <p>
+                        Enigmas, pistas y secretos por descubrir.
+                    </p>
+
+                    <a href="{{ url_for('misterio') }}" class="btn-aventura">
+                        Leer misterio
+                    </a>
+
+                </div>
+
+                <!-- TERROR -->
+                <div class="diapositiva">
+
+                    <img src="{{ url_for('static', filename='img/terror.jpeg') }}" alt="Terror">
+
+                    <span class="numero">03 / TERROR</span>
+
+                    <h3>Terror</h3>
+
+                    <p>
+                        Historias escalofriantes que te pondrán los pelos de punta.
+                    </p>
+
+                    <a href="{{ url_for('terror') }}" class="btn-aventura">
+                        Leer terror
+                    </a>
+
+                </div>
+
+                <!-- AVENTURA -->
+                <div class="diapositiva">
+
+                    <img src="{{ url_for('static', filename='img/aventura.jpeg') }}" alt="Aventura">
+
+                    <span class="numero">04 / AVENTURA</span>
+
+                    <h3>Aventura</h3>
+
+                    <p>
+                        Historias emocionantes donde todo puede pasar.
+                    </p>
+
+                    <a href="{{ url_for('aventura') }}" class="btn-aventura">
+                        Leer aventura
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PUNTOS INDICADORES -->
+    <div class="puntos" id="puntos"></div>
+
+    <p id="resultado"></p>
+
+</body>
+</html>
